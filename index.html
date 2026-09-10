@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>huangse电影-影视风格解析与观影指南</title>
+  <meta name="description" content="了解huangse电影的类型风格、视觉手法与观影须知。提供客观解析、相关作品介绍及常见问题，帮助观众理性选择与观看。">
+  <meta name="keywords" content="huangse电影, 类型片, 视觉风格, 观影指南, 电影解析, 影视推荐">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f0f13;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #eaeaea;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #16161d;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    /* 头部 */
+    .site-header {
+      background: #1f1f2b;
+      padding: 18px 30px;
+      border-bottom: 1px solid #33334a;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f2c94c;
+      text-shadow: 0 2px 8px rgba(242, 201, 76, 0.3);
+      line-height: 1.2;
+    }
+
+    .logo-area p {
+      color: #aaaabb;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .header-search {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header-search input {
+      padding: 10px 18px;
+      border-radius: 40px;
+      border: 1px solid #44445c;
+      background: #101018;
+      color: #fff;
+      min-width: 220px;
+      outline: none;
+    }
+
+    .header-search button {
+      padding: 10px 22px;
+      background: #f2c94c;
+      color: #1e1e24;
+      font-weight: 600;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .header-search button:hover {
+      background: #ffde6b;
+    }
+
+    /* 导航 */
+    .main-nav {
+      background: #23232f;
+      padding: 0 20px;
+      border-bottom: 1px solid #2f2f42;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .main-nav a {
+      display: inline-block;
+      padding: 14px 0;
+      color: #d5d5e0;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 3px solid transparent;
+      transition: 0.2s;
+    }
+
+    .main-nav a:hover, .main-nav .active a {
+      color: #f2c94c;
+      border-bottom-color: #f2c94c;
+    }
+
+    /* 首屏——风格简介 */
+    .hero-section {
+      padding: 50px 30px 40px;
+      background: radial-gradient(circle at 10% 20%, #2a2a3a, #0e0e14);
+      border-bottom: 1px solid #34344a;
+      text-align: center;
+    }
+
+    .hero-section h2 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #f5f5fa;
+      letter-spacing: 1px;
+    }
+
+    .hero-section .subhead {
+      font-size: 1.3rem;
+      color: #cbcbdc;
+      margin: 18px auto 30px;
+      max-width: 750px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .hero-tags span {
+      background: rgba(242, 201, 76, 0.12);
+      border: 1px solid #f2c94c33;
+      color: #f2c94c;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .intro-card {
+      margin-top: 30px;
+      background: #1d1d29;
+      padding: 25px 30px;
+      border-radius: 16px;
+      text-align: left;
+      border-left: 5px solid #f2c94c;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .intro-card p {
+      color: #d0d0dd;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    /* 内容区块 */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 30px 30px 20px;
+    }
+
+    .feature-block {
+      background: #1d1d29;
+      padding: 24px 24px 20px;
+      border-radius: 12px;
+      border: 1px solid #2d2d40;
+      transition: 0.2s;
+    }
+
+    .feature-block:hover {
+      border-color: #f2c94c55;
+    }
+
+    .feature-block h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #f2c94c;
+      border-left: 4px solid #f2c94c;
+      padding-left: 12px;
+    }
+
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #2d2d3f;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #c6c6d6;
+    }
+
+    .feature-list li::before {
+      content: "▹";
+      color: #f2c94c;
+      font-weight: bold;
+    }
+
+    .btn-more {
+      display: inline-block;
+      margin-top: 18px;
+      color: #f2c94c;
+      background: transparent;
+      border: 1px solid #f2c94c;
+      padding: 8px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .btn-more:hover {
+      background: #f2c94c;
+      color: #1a1a22;
+    }
+
+    /* 榜单 */
+    .ranking-panel {
+      padding: 15px 30px 30px;
+    }
+
+    .ranking-panel h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+      border-bottom: 2px solid #f2c94c;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .ranking-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .ranking-item {
+      background: #1d1d29;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid #2d2d40;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ranking-item .rank-num {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #f2c94c;
+    }
+
+    .ranking-item h4 {
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .ranking-item p {
+      color: #9d9db0;
+      font-size: 0.9rem;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #77778b;
+      margin-top: auto;
+      border-top: 1px solid #2a2a3a;
+      padding-top: 10px;
+    }
+
+    /* 双栏布局：影评+指南 */
+    .info-columns {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      padding: 0 30px 35px;
+    }
+
+    .article-card {
+      background: #1d1d29;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #2d2d40;
+    }
+
+    .article-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .article-card p {
+      color: #c0c0d2;
+      margin-bottom: 15px;
+    }
+
+    .faq-box {
+      background: #20202c;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .faq-box summary {
+      font-weight: 600;
+      color: #e8e8f0;
+      margin: 10px 0 5px;
+      cursor: pointer;
+    }
+
+    .faq-box p {
+      color: #b0b0c0;
+      margin: 0 0 15px;
+      padding-left: 10px;
+      border-left: 2px solid #f2c94c55;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: #1a1a22;
+      border-top: 1px solid #2f2f42;
+      padding: 30px;
+      text-align: center;
+      color: #8686a0;
+      font-size: 0.9rem;
+    }
+
+    .site-footer small {
+      display: block;
+      margin-top: 5px;
+      color: #5a5a70;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .content-grid, .info-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+      .site-header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .header-search {
+        width: 100%;
+        display: flex;
+      }
+      .header-search input {
+        flex: 1;
+        min-width: auto;
+      }
+      .main-nav ul {
+        gap: 15px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 0 10px;
+      }
+      .hero-section, .feature-block, .article-card, .ranking-panel, .info-columns {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .ranking-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <header class="site-header">
+    <div class="logo-area">
+      <h1>huangse电影</h1>
+      <p>风格 · 解析 · 观影</p>
+    </div>
+    <div class="header-search">
+      <input type="search" placeholder="搜索电影、导演、风格…" aria-label="搜索">
+      <button type="button">搜索</button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="#">风格档案</a></li>
+      <li><a href="#">代表作品</a></li>
+      <li><a href="#">视觉美学</a></li>
+      <li><a href="#">观影指南</a></li>
+      <li><a href="#">专题文章</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 首屏  -->
+    <section class="hero-section">
+      <h2>huangse电影 · 银幕异色美学</h2>
+      <div class="subhead">一种以视觉张力、情绪氛围与大胆叙事著称的电影风格。我们以客观视角，带您看懂它的类型脉络、标志手法与影史坐标。</div>
+      <div class="hero-tags">
+        <span>#风格溯源</span>
+        <span>#光影实验</span>
+        <span>#当代回响</span>
+        <span>#影史迷影</span>
+      </div>
+      <div class="intro-card">
+        <p><strong>“huangse电影”并非单一类型，而是一种跨越地域与年代的创作倾向。</strong> 它往往以高饱和色彩、非常规叙事和争议性主题引发讨论。理解它，需要从镜头语言、社会语境与作者表达三个维度进入。</p>
+        <p>本站专注于风格梳理、作品深读与理性观影参考，不提供直接下载、资源链接或盗版内容。</p>
+      </div>
+    </section>
+
+    <!-- 双栏特色内容 -->
+    <section class="content-grid">
+      <article class="feature-block">
+        <h3>风格视觉特征</h3>
+        <ul class="feature-list">
+          <li><strong>高反差用光：</strong> 大量使用霓虹色、阴影切割，营造心理压迫或迷幻感。</li>
+          <li><strong>非典型构图：</strong> 倾斜视角、不规则画框，打破稳定感，隐喻失序与欲望。</li>
+          <li><strong>超现实符号：</strong> 动物、镜像、液体等意象重复出现，承载潜台词。</li>
+          <li><strong>剪辑节奏：</strong> 跳切与慢镜并存，情绪流优先于线性逻辑。</li>
+        </ul>
+        <a href="#" class="btn-more">阅读完整美学分析</a>
+      </article>
+
+      <article class="feature-block">
+        <h3>观影心理提示</h3>
+        <ul class="feature-list">
+          <li><strong>并非所有观众都适合：</strong> 部分作品包含强烈冲击场面，请评估耐受度。</li>
+          <li><strong>关注作者表达：</strong> 许多导演以该风格探讨禁忌、欲望与身份议题。</li>
+          <li><strong>避免刻板印象：</strong> 不是所有“huangse电影”都指向情色，部分属于实验电影。</li>
+          <li><strong>结合时代背景：</strong> 上世纪70年代及90年代的作品风格差异显著。</li>
+        </ul>
+        <a href="#" class="btn-more">查看观影注意事项</a>
+      </article>
+    </section>
+
+    <!-- 代表作品与榜单 (非真实虚构数据，以风格化描述为主) -->
+    <section class="ranking-panel">
+      <h3>风格参考作品与影人</h3>
+      <div class="ranking-list">
+        <div class="ranking-item">
+          <div class="rank-num">01</div>
+          <h4>霓虹暗夜</h4>
+          <p>赛博朋克外衣下的存在主义追问，色彩作为叙事工具。</p>
+          <div class="meta"><span>导演: 虚构参考</span><span>1980s</span></div>
+        </div>
+        <div class="ranking-item">
+          <div class="rank-num">02</div>
+          <h4>血色庄园</h4>
+          <p>南方哥特与心理惊悚的混合体，家族秘密与潮湿影像。</p>
+          <div class="meta"><span>作者: 某欧洲导演</span><span>2000s</span></div>
+        </div>
+        <div class="ranking-item">
+          <div class="rank-num">03</div>
+          <h4>欲望的隐晦曲线</h4>
+          <p>极简对白，大量留白，探讨亲密关系中的权力游戏。</p>
+          <div class="meta"><span>风格标签: 极简主义</span><span>1990s</span></div>
+        </div>
+        <div class="ranking-item">
+          <div class="rank-num">04</div>
+          <h4>暗房</h4>
+          <p>黑白与彩色交织的元电影，关于观看与被观看的悖论。</p>
+          <div class="meta"><span>国家: 亚洲</span><span>2010s</span></div>
+        </div>
+        <div class="ranking-item">
+          <div class="rank-num">05</div>
+          <h4>迷幻公路</h4>
+          <p>公路片框架下的幻觉之旅，胶片颗粒感与过度曝光。</p>
+          <div class="meta"><span>风格: 实验电影</span><span>1970s</span></div>
+        </div>
+      </div>
+      <p style="color:#77778b; font-size:0.9rem; margin-top:15px;">* 以上为风格化示例，不代表真实影片。旨在展示常见母题与视觉方向。</p>
+    </section>
+
+    <!-- 深入文章+FAQ -->
+    <div class="info-columns">
+      <div class="article-card">
+        <h3>从“禁区”到艺术馆：huangse电影的变迁</h3>
+        <p>过去半个多世纪，这类电影从地下放映厅逐渐走进学术研讨。许多导演利用其外壳表达对政治、性别和消费主义的批判。例如，欧洲某些艺术影院曾策划“异色电影回顾展”，重新评估其美学价值。</p>
+        <p>与此同时，流媒体时代的内容分级制度，让更多观众能接触到经过修复的经典作品。但需注意，仍有一些粗制滥造的内容借用该名号，观众应选择有口碑认证的版本或正规发行渠道。</p>
+        <p>我们坚信：了解背景、保持批判性，才能真正理解这类电影的价值与局限。</p>
+      </div>
+      <aside class="faq-box">
+        <h3 style="color:#f2c94c; margin-bottom:10px;">常见问题</h3>
+        <details>
+          <summary>huangse电影等于色情片吗？</summary>
+          <p>不等同。该词在中文互联网语境中常指代“限制级/情色或擦边”的电影，但也涵盖黑色电影、心理惊悚、实验影片。具体需看内容标签。</p>
+        </details>
+        <details>
+          <summary>在哪里可以合法观看？</summary>
+          <p>建议使用正规流媒体平台（如部分艺术电影库、电影节线上展映）。国内平台极少收录，可关注香港电影节、台北金马影展等。</p>
+        </details>
+        <details>
+          <summary>如何快速判断是否适合自己？</summary>
+          <p>查看IMDB家长指南或豆瓣“限制级”标签，了解裸露、暴力程度。先看影评或导演访谈，再做选择。</p>
+        </details>
+        <details>
+          <summary>为什么很多导演喜欢这种风格？</summary>
+          <p>因为它能突破传统叙事，用视觉冲击直接刺激观众感官，也便于隐喻和讽刺。但并非所有作品都有深度。</p>
+        </details>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>huangse电影 · 风格研究与观影参考</strong></p>
+    <p>本站不提供任何非法资源，仅作电影文化与美学讨论。</p>
+    <small>© 2025 影迷资料站 | 理性观影，尊重创作</small>
+  </footer>
+</div>
+</body>
+</html>
